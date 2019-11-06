@@ -1,0 +1,33 @@
+.hBoxCommitDetails {
+    -fx-background-color: rgb(193, 229, 255);
+}
+
+.CommitDetail {
+    -fx-text-fill: #353535;
+}
+
+.hBoxCommitDetails:hover {
+    -fx-background-color: #00a1ff;
+}
+
+.hBoxCommitDetails:hover .CommitDetail {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.hBoxCommitDetails:pressed {
+    -fx-background-color: #0fb2ff;
+}
+
+.labelBranchName {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.rectBranchName {
+    -fx-fill: linear-gradient(to bottom, #ff8400, #ffcc0a);
+}
+
+.rectBranchNameRTB {
+    -fx-fill: linear-gradient(to bottom, #e246a2, #f5aeae);
+}

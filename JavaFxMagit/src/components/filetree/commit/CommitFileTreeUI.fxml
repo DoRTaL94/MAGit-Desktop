@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vBoxRoot" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="629.0" prefWidth="907.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="components.filetree.commit.CommitFileTreeController">
+   <children>
+      <VBox alignment="CENTER" styleClass="commit-tree-header">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Commit Files">
+               <font>
+                  <Font name="Yu Gothic Light" size="36.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Commit Sha1:">
+                     <font>
+                        <Font name="Yu Gothic Light" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="labelCommitSha1" alignment="CENTER" contentDisplay="CENTER" text="-">
+                     <font>
+                        <Font name="Yu Gothic Light" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button fx:id="buttonCopyCommitSha1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#copyCommitSha1ToClipboardAction" prefHeight="30.0" prefWidth="30.0" />
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Separator>
+         </children>
+      </VBox>
+      <SplitPane dividerPositions="0.49846153846153846" prefHeight="328.0" prefWidth="977.0" VBox.vgrow="ALWAYS">
+         <items>
+            <HBox fx:id="hBoxCommitFiles" prefHeight="100.0" prefWidth="200.0" />
+            <TextArea fx:id="textAreaCommitFileContent" editable="false" prefHeight="200.0" prefWidth="200.0" />
+         </items>
+         <VBox.margin>
+            <Insets bottom="2.0" />
+         </VBox.margin>
+      </SplitPane>
+      <VBox alignment="CENTER" styleClass="commit-tree-header" VBox.vgrow="NEVER">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <children>
+            <Separator prefWidth="200.0" VBox.vgrow="ALWAYS" />
+            <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" prefHeight="11.0" prefWidth="316.0" text="Selected File Details" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="Yu Gothic Light" size="36.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Separator prefWidth="200.0" />
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="File Sha1:" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Segoe UI Light" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="labelFileSha1" alignment="CENTER" contentDisplay="CENTER" text="-">
+               <font>
+                  <Font name="Segoe UI Light" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Label>
+            <Button fx:id="buttonCopyFileSha1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#copyFileSha1ToClipboardAction" prefHeight="30.0" prefWidth="30.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label text="Last Update Date:">
+               <font>
+                  <Font name="Segoe UI Light" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="labelLastUpdateDate" text="-">
+               <font>
+                  <Font name="Segoe UI Light" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label text="Last Updater:">
+               <font>
+                  <Font name="Segoe UI Light" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="labelLastUpdater" text="-">
+               <font>
+                  <Font name="Segoe UI Light" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</VBox>

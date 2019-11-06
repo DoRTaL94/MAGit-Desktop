@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="borderPaneMain" prefHeight="750" prefWidth="1100" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.MagitController">
+   <top>
+      <VBox fx:id="vBoxTop" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="hBoxMenuBar">
+               <children>
+                  <MenuBar fx:id="menuBarMain" HBox.hgrow="ALWAYS">
+                    <menus>
+                      <Menu fx:id="menuStart" mnemonicParsing="false" text="Start">
+                        <items>
+                          <MenuItem fx:id="menuItemStartOpenRepo" mnemonicParsing="false" onAction="#openRepositoryAction" text="Open repository..." />
+                              <MenuItem fx:id="menuItemLoadRepoXml" mnemonicParsing="false" onAction="#loadRepoFromXmlAction" text="Load repository from xml" />
+                              <MenuItem fx:id="menuItemCreateRepo" mnemonicParsing="false" onAction="#createRepoAction" text="Create new repository" />
+                              <MenuItem fx:id="menuItemExit" mnemonicParsing="false" onAction="#exitAction" text="Exit" />
+                        </items>
+                      </Menu>
+                      <Menu fx:id="menuRepository" mnemonicParsing="false" text="Repository">
+                        <items>
+                          <MenuItem fx:id="menuItemFileExplorer" mnemonicParsing="false" onAction="#openFileExplorerAction" text="File explorer" />
+                              <MenuItem fx:id="menuItemChangeUserName" mnemonicParsing="false" onAction="#changeUserNameAction" text="Change user name..." />
+                              <MenuItem fx:id="menuItemExportToXml" mnemonicParsing="false" onAction="#exportToXmlAction" text="Export repository to xml" />
+                              <MenuItem fx:id="menuItemClone" mnemonicParsing="false" onAction="#cloneAction" text="Clone" />
+                        </items>
+                      </Menu>
+                      <Menu fx:id="menuCommands" mnemonicParsing="false" text="Commands">
+                        <items>
+                          <MenuItem fx:id="menuItemCommit" mnemonicParsing="false" onAction="#commitAction" text="Commit" />
+                              <MenuItem fx:id="menuItemCreateBranch" mnemonicParsing="false" onAction="#createBranchAction" text="Create branch" />
+                              <MenuItem fx:id="menuItemDeleteBranch" mnemonicParsing="false" onAction="#deleteBranchAction" text="Delete branch" />
+                              <MenuItem fx:id="menuItemCheckoutBranch" mnemonicParsing="false" onAction="#checkoutAction" text="Checkout branch" />
+                              <MenuItem fx:id="menuItemResetHeadBranch" mnemonicParsing="false" onAction="#resetHeadBranchAction" text="Reset head branch" />
+                              <MenuItem fx:id="menuItemMergeBranches" mnemonicParsing="false" onAction="#mergeBranchesAction" text="Merge branches" />
+                              <MenuItem fx:id="menuItemFetch" mnemonicParsing="false" onAction="#fetchAction" text="Fetch" />
+                              <MenuItem fx:id="menuItemPull" mnemonicParsing="false" onAction="#pullAction" text="Pull" />
+                              <MenuItem fx:id="menuItemPush" mnemonicParsing="false" onAction="#pushAction" text="Push" />
+                        </items>
+                      </Menu>
+                        <Menu fx:id="menuCommands1" mnemonicParsing="false" text="Perferences">
+                           <items>
+                              <MenuItem fx:id="menuItemChangeTheme" mnemonicParsing="false" onAction="#changeThemeAction" text="Change theme" />
+                           </items>
+                        </Menu>
+                    </menus>
+                  </MenuBar>
+               </children>
+            </HBox>
+            <HBox fx:id="hBoxToolBar" prefHeight="12.0" prefWidth="867.0">
+               <children>
+                  <ToolBar fx:id="toolBarMain" HBox.hgrow="ALWAYS">
+                     <items>
+                        <Label fx:id="labelWc" text="Working directory:" />
+                        <MenuButton fx:id="menuButtonWc" mnemonicParsing="false" styleClass="menu-button-tool-bar" text="N/A">
+                           <items>
+                              <MenuItem fx:id="menuItemWcPath" mnemonicParsing="false" text="N/A" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <MenuItem fx:id="menuItemSplitMenuOpenRepo" mnemonicParsing="false" onAction="#openRepositoryAction" text="Open repository..." />
+                           </items>
+                        </MenuButton>
+                        <Label fx:id="labelActiveBranch" text="Active branch:">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding></Label>
+                        <MenuButton fx:id="menuButtonActiveBranch" mnemonicParsing="false" styleClass="menu-button-tool-bar" text="N/A">
+                           <items>
+                            <MenuItem fx:id="menuItemActiveBranch" mnemonicParsing="false" text="N/A" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                            <MenuItem fx:id="menuItemCheckout" mnemonicParsing="false" onAction="#checkoutAction" text="Checkout branch..." />
+                           </items>
+                        </MenuButton>
+                        <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0">
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding></Separator>
+                        <Label fx:id="labelBranches" text="Branches:" />
+                        <ChoiceBox fx:id="choiceBoxBranches" prefWidth="150.0" />
+                        <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0">
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding></Separator>
+                        <Button fx:id="buttonCommit" mnemonicParsing="false" onAction="#commitAction" text="Commit" />
+                        <Separator orientation="VERTICAL">
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding></Separator>
+                        <Button fx:id="buttonRefresh" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#refreshAction" text="Refresh" />
+                     </items>
+                  </ToolBar>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <SplitPane fx:id="splitPaneCenterWindow" dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+         <items>
+            <HBox fx:id="hBoxTopSplitPane" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ScrollPane fx:id="scrollPaneCommitlist" fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <content>
+                        <StackPane fx:id="stackPaneCommitTree" prefHeight="150.0" prefWidth="200.0">
+                           <children>
+                              <Pane fx:id="paneCommitTree" mouseTransparent="true" prefHeight="200.0" prefWidth="200.0" />
+                           </children>
+                        </StackPane>
+                     </content>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </ScrollPane>
+               </children>
+            </HBox>
+            <HBox fx:id="hBoxBottomSplitPane" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <StackPane HBox.hgrow="ALWAYS">
+                     <children>
+                        <TabPane fx:id="tabPaneInfo" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab fx:id="tabFileTree" text="Repository">
+                                 <content>
+                                    <SplitPane fx:id="splitPaneFileTree" dividerPositions="0.36882546652030734" prefHeight="200.0" prefWidth="200.0">
+                                       <items>
+                                          <HBox id="hBoxRepoTree" fx:id="hBoxFileTree" prefHeight="100.0" prefWidth="200.0" />
+                                          <HBox fx:id="hBoxTextViewer" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <TextArea fx:id="textAreaFileTree" editable="false" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                                             </children>
+                                          </HBox>
+                                       </items>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </SplitPane>
+                                 </content>
+                              </Tab>
+                            <Tab fx:id="tabWcStatus" text="WC Status" />
+                              <Tab fx:id="tabDiff" text="Diff">
+                                 <content>
+                                    <VBox fx:id="vBoxDiff" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <HBox alignment="CENTER">
+                                             <children>
+                                                <RadioButton fx:id="radioButtonPreceding1" mnemonicParsing="false" selected="true" text="Preceding Commit #1">
+                                                   <HBox.margin>
+                                                      <Insets right="100.0" />
+                                                   </HBox.margin>
+                                                </RadioButton>
+                                                <RadioButton fx:id="radioButtonPreceding2" mnemonicParsing="false" text="Preceding commit #2" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </content></Tab>
+                              <Tab fx:id="tabConsole" text="Console" />
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+         </items>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </SplitPane>
+   </center>
+</BorderPane>

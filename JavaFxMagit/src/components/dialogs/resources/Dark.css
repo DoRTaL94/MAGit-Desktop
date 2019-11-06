@@ -1,0 +1,31 @@
+#hbox-header {
+    -fx-background-color: #535353;
+}
+
+VBox {
+    -fx-background-color: #373637;
+}
+
+VBox .label,
+VBox .text,
+HBox {
+    -fx-text-fill: #dbdbdb;
+}
+
+.separator .line{
+    -fx-border-color: #383838;
+    -fx-border-width: 1px;
+}
+
+.button {
+    -fx-background-color: #535353;
+    -fx-text-fill: #dbdbdb;
+}
+
+.button:pressed {
+    -fx-effect: innershadow(three-pass-box, #4d4c4d, 10, 0.3, 0, 0);
+}
+
+.button:hover {
+    -fx-background-color: #7e7e7e;
+}

@@ -1,0 +1,86 @@
+.dialog-pane {
+    -fx-background-color: #373637;
+    -fx-padding: 0;
+}
+
+.dialog-pane .label {
+    -fx-text-fill: white;
+}
+
+.dialog-pane .button{
+    -fx-background-color: #535353;
+    -fx-text-fill: #dbdbdb;
+    -fx-wrap-text: true;
+    -fx-cursor:hand;
+}
+
+.radio-button-theme {
+    -fx-text-fill: white;
+}
+
+.dialog-pane .button:pressed {
+    -fx-effect: innershadow(three-pass-box, #4d4c4d, 10, 0.3, 0, 0);
+}
+
+.dialog-pane .button:hover {
+    -fx-background-color: #7e7e7e;
+}
+
+.dialog-pane:header .header-panel{
+    -fx-background-color: #8a898a;
+    -fx-text-fill:white;
+}
+
+#header {
+    -fx-background-color: #2d2c2d;
+}
+
+VBox,
+HBox {
+    -fx-background-color: #373637;
+}
+
+VBox .label,
+VBox .text,
+HBox {
+    -fx-text-fill: #dbdbdb;
+}
+
+.separator .line{
+    -fx-border-color: #383838;
+    -fx-border-width: 1px;
+}
+
+.button {
+    -fx-background-color: #535353;
+    -fx-text-fill: #dbdbdb;
+}
+
+.button:pressed {
+    -fx-effect: innershadow(three-pass-box, #4d4c4d, 10, 0.3, 0, 0);
+}
+
+.button:hover {
+    -fx-background-color: #7e7e7e;
+}
+
+.text-area {
+    -fx-font-size: 16px;
+    -fx-font-family: Arial;
+    -fx-text-fill: #dbdbdb;
+}
+
+.text-area .content {
+    -fx-background-color: #454445;
+}
+
+.progress-bar {
+    -fx-box-border: black;
+    -fx-accent: #13aeff;
+}
+
+.progress-bar > .track {
+    -fx-background-color: #767476;
+    -fx-background-insets: 0, 0 0 1 0, 1 1 2 1;
+    -fx-background-radius: 4, 3, 2; /* 10, 9, 8 */
+}

@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact name="Utils:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Utils_jar</output-path>
+    <root id="root">
+      <element id="archive" name="Utils.jar">
+        <element id="module-output" name="Utils" />
+      </element>
+      <element id="file-copy" path="$PROJECT_DIR$/Utils/src/lib/ext/commons-io-2.6.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/../M.A.Git Excercise/References/Third Parties/AncestorFinder.jar" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="221.0" prefWidth="491.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="components.warnings.WarningRepoExistsController">
+   <children>
+      <HBox id="header" alignment="CENTER" prefHeight="81.0" prefWidth="491.0">
+         <children>
+            <Label text="Warning repository is already exists">
+               <font>
+                  <Font name="Segoe UI Light" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Separator prefWidth="200.0" />
+      <Label text="How do you wish to proceed?">
+         <font>
+            <Font name="Segoe WP Light" size="22.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="20.0" top="30.0" />
+         </VBox.margin>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="40.0" prefWidth="600.0">
+         <children>
+          <Button fx:id="buttonExistingRepo" mnemonicParsing="false" onAction="#loadExistingRepoAction" text="Load existing repository">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="10.0" top="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Segoe UI Historic" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonDeleteAndCreateNew" mnemonicParsing="false" onAction="#deleteAndCreateNewRepoAction" text="Delete and create new">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="buttonCancelRepoWarning" mnemonicParsing="false" onAction="#cancelAction" prefHeight="31.0" text="Cancel">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="10.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

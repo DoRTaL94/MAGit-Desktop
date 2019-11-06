@@ -1,0 +1,26 @@
+#rectangleTreeNode {
+    -fx-fill: #dedede;
+    -fx-stroke: #b7b7b7;
+    -fx-stroke-width: 1px;
+    -fx-arc-height: 16px;
+    -fx-arc-width: 16px;
+    -fx-effect: dropshadow(three-pass-box, lightgrey, 3, 0, 0, 0);
+}
+
+#headBranchRectangleTreeNode {
+    -fx-fill: #fe71a4;
+    -fx-stroke: #bb5e6d;
+    -fx-stroke-width: 1px;
+    -fx-arc-height: 16px;
+    -fx-arc-width: 16px;
+    -fx-effect: dropshadow(three-pass-box, lightgrey, 3, 0, 0, 0);
+}
+
+#branchSelectedTreeNode {
+    -fx-fill: #fee64c;
+    -fx-stroke: #9c8800;
+    -fx-stroke-width: 1px;
+    -fx-arc-height: 16px;
+    -fx-arc-width: 16px;
+    -fx-effect: dropshadow(three-pass-box, lightgrey, 3, 0, 0, 0);
+}

@@ -1,0 +1,80 @@
+.dialog-pane {
+    -fx-background-color: white;
+    -fx-padding: 0;
+}
+
+.dialog-pane .label {
+    -fx-text-fill: #232323;
+}
+
+.dialog-pane .button{
+    -fx-background-color: #45c8ff;
+    -fx-text-fill: white;
+    -fx-wrap-text: true;
+    -fx-cursor:hand;
+}
+
+.radio-button-theme {
+    -fx-text-fill: #222222;
+}
+
+.dialog-pane .button:pressed {
+    -fx-effect: innershadow(three-pass-box, rgba(77, 76, 77, 0.34), 10, 0.3, 0, 0);
+}
+
+.dialog-pane .button:hover {
+    -fx-background-color: #78d1ff;
+}
+
+.dialog-pane:header .header-panel{
+    -fx-background-color: #d3d2d3;
+    -fx-text-fill: #262626;
+}
+
+#header {
+    -fx-background-color: #d3d2d3;
+}
+
+VBox,
+HBox {
+    -fx-background-color: white;
+}
+
+VBox .label,
+VBox .text,
+HBox {
+    -fx-text-fill: #262626;
+}
+
+.separator .line{
+    -fx-border-color: #dcdcdc;
+    -fx-border-width: 1px;
+}
+
+.button {
+    -fx-background-color: #45c8ff;
+    -fx-text-fill: white;
+}
+
+.button:pressed {
+    -fx-effect: innershadow(three-pass-box, #4d4c4d, 10, 0.3, 0, 0);
+}
+
+.button:hover {
+    -fx-background-color: #78d1ff;
+}
+
+.text-area {
+    -fx-font-size: 16px;
+    -fx-font-family: Tahoma;
+    -fx-text-fill: #262626;
+}
+
+.text-area .content {
+    -fx-background-color: white;
+}
+
+.progress-bar {
+    -fx-box-border: #000000;
+    -fx-accent: #e36b8f;
+}

@@ -1,0 +1,20 @@
+#rectangleTreeNode {
+    -fx-fill: #c3c3c3;
+    -fx-stroke: #767676;
+    -fx-stroke-width: 1px;
+    -fx-effect: dropshadow(three-pass-box, lightgrey, 3, 0, 0, 0);
+}
+
+#headBranchRectangleTreeNode {
+    -fx-fill: #4dbeff;
+    -fx-stroke: #0062bd;
+    -fx-stroke-width: 1px;
+    -fx-effect: dropshadow(three-pass-box, lightgrey, 3, 0, 0, 0);
+}
+
+#branchSelectedTreeNode {
+    -fx-fill: #fee64c;
+    -fx-stroke: #9c8800;
+    -fx-stroke-width: 1px;
+    -fx-effect: dropshadow(three-pass-box, lightgrey, 3, 0, 0, 0);
+}

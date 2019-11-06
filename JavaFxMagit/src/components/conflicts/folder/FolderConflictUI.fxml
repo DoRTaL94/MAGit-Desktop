@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="components.conflicts.folder.FolderConflictController">
+   <children>
+      <Label text="Please choose one of the below:">
+         <font>
+            <Font name="Yu Gothic UI Light" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+      </Label>
+      <HBox maxHeight="-Infinity">
+         <children>
+            <VBox fx:id="vBoxOurs" alignment="TOP_CENTER" prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: cecece;" styleClass="folder-selection-container" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+               <children>
+                  <RadioButton fx:id="radioButtonOurs" mnemonicParsing="false" onAction="#oursSelectedAction" selected="true" text="Ours">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="5.0" />
+                     </VBox.margin>
+                  </RadioButton>
+                  <StackPane fx:id="stackPaneOursFolderContent" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Folder deleted">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+               </children>
+            </VBox>
+            <VBox fx:id="vBoxTheirs" alignment="TOP_CENTER" prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: cecece;" styleClass="folder-selection-container" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+               <children>
+                  <RadioButton fx:id="radioButtonTheirs" mnemonicParsing="false" onAction="#theirsSelectedAction" text="Theirs">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </RadioButton>
+                  <StackPane fx:id="stackPaneTheirsFolderContent" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label text="Folder deleted">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

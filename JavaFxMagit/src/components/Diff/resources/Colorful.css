@@ -1,0 +1,49 @@
+.list-cell:selected {
+    -fx-background-color: #45c8ff;
+}
+
+.list-cell:hover {
+    -fx-background-color: rgb(104, 218, 255);
+}
+
+.list-cell:pressed {
+    -fx-background-color: #45c8ff;
+    -fx-effect: innershadow(three-pass-box, rgba(0, 0, 0, 0.22), 10, 0.3, 0, 0);
+}
+
+.list-cell {
+    -fx-background-color: #efeeef;
+    -fx-text-fill: #2e2e2e;
+}
+
+.list-cell:odd {
+    -fx-background-color: #fcfbfc;
+    -fx-text-fill: #2e2e2e;
+}
+
+.list-cell:odd:selected {
+    -fx-background-color: #45c8ff;
+}
+
+.list-cell:odd:hover {
+    -fx-background-color: rgba(69, 200, 255, 0.76);
+}
+
+.list-cell:odd:pressed {
+    -fx-background-color: #45c8ff;
+    -fx-effect: innershadow(three-pass-box, rgba(0, 0, 0, 0.15), 10, 0.3, 0, 0);
+}
+
+.list-view {
+    -fx-border-style: none;
+    -fx-background-color: transparent;
+}
+
+.label {
+    -fx-text-fill: #2e2e2e;
+}
+
+.separator .line{
+    -fx-border-color: #c3c3c3;
+    -fx-border-width: 1px;
+}

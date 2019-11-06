@@ -1,0 +1,26 @@
+.tree-cell:selected,
+.tree-cell:expanded > .tree-disclosure-node > .arrow {
+    -fx-background-color: #1280ce;
+}
+
+#hBoxRepoTree {
+    -fx-background-color: #373637;
+}
+
+.tree-cell {
+    -fx-background-color: #373637;
+    -fx-text-fill: #dbdbdb;
+}
+
+.tree-cell > .tree-disclosure-node > .arrow  {
+    -fx-background-color: white;
+}
+
+.tree-cell:selected > .tree-disclosure-node > .arrow {
+    -fx-background-color: white;
+}
+
+.tree-view {
+    -fx-border-style: none;
+    -fx-background-color:transparent;
+}

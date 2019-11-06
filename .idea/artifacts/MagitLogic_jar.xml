@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact name="MagitLogic:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MagitLogic_jar</output-path>
+    <root id="root">
+      <element id="archive" name="MagitLogic.jar">
+        <element id="module-output" name="MagitLogic" />
+        <element id="module-output" name="Utils" />
+      </element>
+      <element id="file-copy" path="$PROJECT_DIR$/Utils/src/lib/ext/commons-io-2.6.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/MagitLogic/src/lib/ext/commons-codec-1.12.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/../M.A.Git Excercise/References/Third Parties/AncestorFinder.jar" />
+    </root>
+  </artifact>
+</component>
